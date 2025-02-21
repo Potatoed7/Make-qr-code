@@ -36,7 +36,7 @@
                 setTimeout(() => {
                     let img = qrContainer.querySelector("img");
                     if (img) {
-                        
+                        img.style.margin = "auto";
                         let downloadLink = document.getElementById("download");
                         downloadLink.href = img.src;
                         downloadLink.style.display = "block"; // Show download button
