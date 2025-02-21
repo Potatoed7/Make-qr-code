@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; }
-        #qrcode { margin: 20px auto; text-align: center; }
+        #qrcode { margin: 20px auto; }
         #download { display: none; margin-top: 10px; }
     </style>
 </head>
@@ -28,7 +28,8 @@
                 let qr = new QRCode(qrContainer, {
                     text: text,
                     width: 200,
-                    height: 200
+                    height: 200,
+                    margin: auto
                 });
 
                 // Wait for QR code to be generated, then enable download
