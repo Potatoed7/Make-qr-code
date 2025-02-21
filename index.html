@@ -28,14 +28,14 @@
                 let qr = new QRCode(qrContainer, {
                     text: text,
                     width: 200,
-                    height: 200,
-                    margin: auto
+                    height: 200
                 });
 
                 // Wait for QR code to be generated, then enable download
                 setTimeout(() => {
                     let img = qrContainer.querySelector("img");
                     if (img) {
+                        img.style.margin = auto;
                         let downloadLink = document.getElementById("download");
                         downloadLink.href = img.src;
                         downloadLink.style.display = "block"; // Show download button
